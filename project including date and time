@@ -1,7 +1,3 @@
-
-
-//NOTE- IT DOESNOT WORK IN DEV. SO COMMENT THE LINE AND NEXT LIME THAT SHOWS ERROR.
-// Online C++ compiler to run C++ program online
 #include <iostream>
 #include<string>
 #include <ctime>
@@ -9,7 +5,7 @@ using namespace std;
 class hotel{
     private:
     int n,p,q,x,w,id;
-    string phone;
+    string phone,date;
     string name1,name2;
     public:
     void setinfo(void);
@@ -20,19 +16,19 @@ class hotel{
 void hotel:: choosehotel(){
     cout<<"Welcome to Hotel search.com"<<endl;
     cout<<endl;
-    
+
     cout<<"This are the top 5 hotel near you"<<endl;
     cout<<endl;
     cout<<"Nepal adventure hotel----press 1 to book it"<<endl;
-    
+
     cout<<"Hotel skyway----press 2 to book it"<<endl;
-     
+
     cout<<"Mama bhanja hotel----press 3 to book it"<<endl;
-     
+
     cout<<"Hotel moonlight----press 4 to book it"<<endl;
-     
+
     cout<<"Solti hotel----press 5 to book it"<<endl;
-     
+
     cout<<"Enter the id of the hotel you want to book"<<endl;
     cin>>id;
     switch(id){
@@ -52,7 +48,7 @@ void hotel:: choosehotel(){
         cout<<"Welcome to online booking of solti hotel"<<endl;
         break;
     };
-    
+
 }
 
 
@@ -65,12 +61,14 @@ void hotel:: setinfo(){
     cin>>name2;
     cout<<"Enter your phone number"<<endl;
     cin>>phone;
-    
+     cout<<"Enter the date you want to book the hotel[m/d/y]"<<endl;
+     cin>>date;
+
 }
 
 void hotel::choose(){
     first:
-    
+
     cout<<"Enter 1 to choose honeymoon room"<<endl;
     cout<<"Enter 2 to choose bussiness room"<<endl;
     cout<<"Enter 3 to choose Delux room"<<endl;
@@ -93,7 +91,7 @@ void hotel::choose(){
             cout<<"Enter how many days you want to book the room"<<endl;
             cin>>x;
             w=5000*x;
-            
+
             cout<<"press 1 to confirm the booking"<<endl;
               cout<<"Press 2 to cancel booking"<<endl;
             cin>>q;
@@ -102,6 +100,7 @@ void hotel::choose(){
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
+                cout<<"booked room for date--"<<date<<endl;
             }
             else{
                 goto first;
@@ -134,6 +133,7 @@ cout<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
+                cout<<"booked room for date--"<<date<<endl;
             }
             else{
                 goto first;
@@ -170,6 +170,7 @@ cout<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
+                cout<<"Booked room for date--"<<date<<endl;
             }
             else{
                 goto first;
@@ -203,6 +204,7 @@ cout<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
+                cout<<"Booked room for date--"<<date<<endl;
             }
             else{
                 goto first;
@@ -235,12 +237,12 @@ int main() {
   tm* localTime = localtime(&currentTime);
 
   // Print the current date and time in Kathmandu
-  cout << "Booking date and time: " << localTime->tm_mon+1 << "/" << localTime->tm_mday << "/" << localTime->tm_year+1900 << " ";
-  cout << localTime->tm_hour << ":" << localTime->tm_min << ":" << localTime->tm_sec << endl;
+  cout << "Booking date : " << localTime->tm_mon+1 << "/" << localTime->tm_mday << "/" << localTime->tm_year+1900 << endl;
+  cout <<"Boking time : "<< localTime->tm_hour << ":" << localTime->tm_min << ":" << localTime->tm_sec << endl;
 
-  
-  
-  
+
+
+
 
     cout<<"Thank you for choosing us"<<endl;
 
