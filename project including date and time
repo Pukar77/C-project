@@ -101,6 +101,7 @@ void hotel::choose(){
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
                 cout<<"booked room for date--"<<date<<endl;
+                cout<<"Room category--Honeymoon room"<<endl;
             }
             else{
                 goto first;
@@ -134,6 +135,7 @@ cout<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
                 cout<<"booked room for date--"<<date<<endl;
+                  cout<<"Room category--Business room"<<endl;
             }
             else{
                 goto first;
@@ -171,6 +173,7 @@ cout<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
                 cout<<"Booked room for date--"<<date<<endl;
+                cout<<"Room category--Delux room"<<endl;
             }
             else{
                 goto first;
@@ -205,6 +208,7 @@ cout<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
                 cout<<"Booked room for date--"<<date<<endl;
+                  cout<<"Room category--Family room"<<endl;
             }
             else{
                 goto first;
