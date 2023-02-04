@@ -67,6 +67,7 @@ class pay: public electricity{
               cout<<"Incorrect password"<<endl;
                goto first;
           }
+          break;
          case 2:
           second:
           cout<<"Enter your khalti password "<<endl;
@@ -100,6 +101,7 @@ class pay: public electricity{
               cout<<"Incorrect password"<<endl;
                goto second;
           }
+          break;
           
        case 3:
           third:
@@ -141,12 +143,13 @@ class pay: public electricity{
   
 };
 
+
 int main() {
-    electricity e;
-    e.getdata();
-    cout<<endl;
-    cout<<endl;
+  
     pay p;
+    p.getdata();
+    cout<<endl;
+    cout<<endl;
     p.display();
 
     return 0;
