@@ -5,7 +5,7 @@
 using namespace std;
 class electricity{
     public:
-    int a,b,c,d;
+    int a,b,t,e;
         int i,j;
     
   void getdata(){
@@ -27,18 +27,18 @@ class electricity{
       
        srand((unsigned)time(0)); 
     j = (rand()%90000)+1; 
-    cout<< "Your total water uses is " <<j<<" letter"<< "\n";
+    cout<< "Your total water uses is " <<j<<" litter"<< "\n";
     if(j<=35000){
-        c=j*0.03;
-        cout<<"Your total cost is "<<c<<" Rupees"<<endl;
+        t=j*0.03;
+        cout<<"Your total cost is "<<t<<" Rupees"<<endl;
     }
     else{
-        c=35000*0.03+(j-35000)*(0.05);
-        cout<<"Your total cost is "<<c<<" rupees"<<endl;
+        t=35000*0.03+(j-35000)*(0.05);
+        cout<<"Your total cost is "<<t<<" rupees"<<endl;
     }
       cout<<endl;
-      d=c+b;
-      cout<<"The total amount you need to pay for electricity and water is "<<d<<endl;
+      e=t+b;
+      cout<<"The total amount you need to pay for electricity and water is "<<e<<endl;
   }
 };
 class pay: public electricity{
@@ -86,15 +86,15 @@ class pay: public electricity{
               cout<<"Incorrect password"<<endl;
                goto first;
           }
-           if(z==d){
+           if(z==e){
                       cout<<"You payed all amount"<<endl;
                   }
-                  else if(z>d){
-                      x=z-b;
+                  else if(z>e){
+                      x=z-e;
                       cout<<"You payed "<<x<<" rupees in advance"<<endl;
                   }
                   else{
-                      x=d-z;
+                      x=e-z;
                       cout<<"You have "<<x<<" rupees dew amount"<<endl;
                   }
           break;
@@ -131,15 +131,15 @@ class pay: public electricity{
               cout<<"Incorrect password"<<endl;
                goto second;
           }
-           if(z==d){
+           if(z==e){
                       cout<<"You payed all amount"<<endl;
                   }
-                  else if(z>d){
-                      x=z-b;
+                  else if(z>e){
+                      x=z-e;
                       cout<<"You payed "<<x<<" rupees in advance"<<endl;
                   }
                   else{
-                      x=d-z;
+                      x=e-z;
                       cout<<"You have "<<x<<" rupees dew amount"<<endl;
                   }
            
@@ -178,15 +178,15 @@ class pay: public electricity{
               cout<<"Incorrect password"<<endl;
                goto third;
           }
-          if(z==d){
+          if(z==e){
                       cout<<"You payed all amount"<<endl;
                   }
-                  else if(z>d){
-                      x=z-b;
+                  else if(z>e){
+                      x=z-e;
                       cout<<"You payed "<<x<<" rupees in advance"<<endl;
                   }
                   else{
-                      x=d-z;
+                      x=e-z;
                       cout<<"You have "<<x<<" rupees dew amount"<<endl;
                   } 
   break;
