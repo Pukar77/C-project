@@ -1,0 +1,153 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+class electricity{
+    float a,b;
+        int i;
+    public:
+  void getdata(){
+      cout<<"Enter your house no"<<endl;
+      cin>>a;
+      srand((unsigned)time(0)); 
+    i = (rand()%3000)+1; 
+    cout<< "Your total electricity uses is " << i <<" megawat"<< "\n";
+    if(i<=500){
+        b=i*5;
+        cout<<"Your total cost is "<<b<<" Rupees"<<endl;
+    }
+    else{
+        b=500*5+(i-500)*(5+2);
+        cout<<"Your total cost is "<<b<<" rupees"<<endl;
+    }
+  }  
+};
+class pay: public electricity{
+    int c,q,z,r;
+    string d;
+  public:
+  void display(){
+      fourth:
+      cout<<"Enter 1 to pay through e-sewa"<<endl;
+      cout<<"Enter 2 to pay through Khalti"<<endl;
+      cout<<"Enter 3 to pay through e- banking"<<endl;
+      cin>>c;
+      switch(c){
+          case 1:
+          first:
+          cout<<"Enter your e-sewa password "<<endl;
+          cin>>d;
+          
+          
+          if(d=="dhoj"){
+              cout<<"Welcome Back"<<endl;
+              cout<<"Press 1 to do online payment"<<endl;
+              cin>>q;
+              if(q==1){
+                  cout<<"Enter the amount you want to pay"<<endl;
+                  cin>>z;
+                  cout<<"Enter 1 to confirm payement"<<endl;
+                  cout<<"enter 2 to cancel booking"<<endl;
+                  cin>>r;
+                  if(r==1){
+                  cout<<"Congratulation payement successful"<<endl;
+                  }
+                  else{
+                      cout<<"Payement canceled"<<endl;
+                      goto fourth;
+                  }
+              }
+              else{
+                  goto fourth;
+              }
+            
+          }
+          else{
+              cout<<"Incorrect password"<<endl;
+               goto first;
+          }
+         case 2:
+          second:
+          cout<<"Enter your khalti password "<<endl;
+          cin>>d;
+          
+          
+          if(d=="dhoj"){
+              cout<<"Welcome Back"<<endl;
+              cout<<"Press 1 to do online payment"<<endl;
+              cin>>q;
+              if(q==1){
+                  cout<<"Enter the amount you want to pay"<<endl;
+                  cin>>z;
+                  cout<<"Enter 1 to confirm payement"<<endl;
+                  cout<<"enter 2 to cancel booking"<<endl;
+                  cin>>r;
+                  if(r==1){
+                  cout<<"Congratulation payement successful"<<endl;
+                  }
+                  else{
+                      cout<<"Payement canceled"<<endl;
+                      goto fourth;
+                  }
+              }
+              else{
+                  goto fourth;
+              }
+            
+          }
+          else{
+              cout<<"Incorrect password"<<endl;
+               goto second;
+          }
+          
+       case 3:
+          third:
+          cout<<"Enter your e-sewa password "<<endl;
+          cin>>d;
+          
+          
+          if(d=="dhoj"){
+              cout<<"Welcome Back"<<endl;
+              cout<<"Press 1 to do online payment"<<endl;
+              cin>>q;
+              if(q==1){
+                  cout<<"Enter the amount you want to pay"<<endl;
+                  cin>>z;
+                  cout<<"Enter 1 to confirm payement"<<endl;
+                  cout<<"enter 2 to cancel booking"<<endl;
+                  cin>>r;
+                  if(r==1){
+                  cout<<"Congratulation payement successful"<<endl;
+                  }
+                  else{
+                      cout<<"Payement canceled"<<endl;
+                      goto fourth;
+                  }
+              }
+              else{
+                  goto fourth;
+              }
+            
+          }
+          else{
+              cout<<"Incorrect password"<<endl;
+               goto third;
+          }
+          
+  
+      }
+      }
+  
+};
+
+int main() {
+    electricity e;
+    e.getdata();
+    cout<<endl;
+    cout<<endl;
+    pay p;
+    p.display();
+
+    return 0;
+}
