@@ -4,16 +4,166 @@
 using namespace std;
 class hotel{
     private:
-    int n,p,q,x,w,id;
-    string phone,date;
+    int n,p,q,x,w,id,c,f,z,r;
+    string phone,date,d;
     string name1,name2;
     public:
     void setinfo(void);
     void choose(void);
     void choosehotel(void);
+     void display(){
+      fourth:
+      cout<<"Enter 1 to pay through e-sewa"<<endl;
+      cout<<"Enter 2 to pay through Khalti"<<endl;
+      cout<<"Enter 3 to pay through e- banking"<<endl;
+      cin>>c;
+      switch(c){
+          case 1:
+          first:
+          cout<<"Enter your e-sewa password "<<endl;
+          cin>>d;
+          
+          
+          if(d=="pukar"){
+              cout<<"Welcome Back"<<endl;
+              cout<<"Press 1 to do online payment"<<endl;
+              cin>>f;
+              if(f==1){
+                  cout<<"Enter the amount you want to pay"<<endl;
+                  cin>>z;
+                  cout<<"Enter 1 to confirm payement"<<endl;
+                  cout<<"enter 2 to cancel booking"<<endl;
+                  cin>>r;
+                  if(r==1){
+                  cout<<"Congratulation payement successful"<<endl;
+                  cout<<"Your room has been booked successfully"<<endl;
+                  }
+                  else{
+                      cout<<"Payement canceled"<<endl;
+                      goto fourth;
+                  }
+              }
+              else{
+                  goto fourth;
+              }
+            
+          }
+          else{
+              cout<<"Incorrect password"<<endl;
+               goto first;
+          }
+          if(w==z){
+                      cout<<"You payed all amount"<<endl;
+                  }
+                  else if(z>w){
+                      x=z-w;
+                      cout<<"Thank you for your tip of "<<x<<" rupees"<<endl;
+                  }
+                  else{
+                      x=w-z;
+                      cout<<"You have "<<x<<" rupees dew amount"<<endl;
+                  }
+                  break;
+                  case 2:
+          
+          cout<<"Enter your khalti password "<<endl;
+          cin>>d;
+          
+          
+          if(d=="pukar"){
+              cout<<"Welcome Back"<<endl;
+              cout<<"Press 1 to do online payment"<<endl;
+              cin>>f;
+              if(f==1){
+                  cout<<"Enter the amount you want to pay"<<endl;
+                  cin>>z;
+                  cout<<"Enter 1 to confirm payement"<<endl;
+                  cout<<"enter 2 to cancel booking"<<endl;
+                  cin>>r;
+                  if(r==1){
+                  cout<<"Congratulation payement successful"<<endl;
+                  cout<<"Your room has been booked successfully"<<endl;
+                  }
+                  else{
+                      cout<<"Payement canceled"<<endl;
+                      goto fourth;
+                  }
+              }
+              else{
+                  goto fourth;
+              }
+            
+          }
+          else{
+              cout<<"Incorrect password"<<endl;
+               goto first;
+          }
+          if(w==z){
+                      cout<<"You payed all amount"<<endl;
+                  }
+                  else if(z>w){
+                      x=z-w;
+                      cout<<"Thank you for your tip of "<<x<<" rupees"<<endl;
+                  }
+                  else{
+                      x=w-z;
+                      cout<<"You have "<<x<<" rupees dew amount"<<endl;
+                  }
+                  break;
+                  
+          case 3:
+          
+          cout<<"Enter your e-banking password "<<endl;
+          cin>>d;
+          
+          
+          if(d=="pukar"){
+              cout<<"Welcome Back"<<endl;
+              cout<<"Press 1 to do online payment"<<endl;
+              cin>>f;
+              if(f==1){
+                  cout<<"Enter the amount you want to pay"<<endl;
+                  cin>>z;
+                  cout<<"Enter 1 to confirm payement"<<endl;
+                  cout<<"enter 2 to cancel booking"<<endl;
+                  cin>>r;
+                  if(r==1){
+                  cout<<"Congratulation payement successful"<<endl;
+                  cout<<"Your room has been booked successfully"<<endl;
+                  }
+                  else{
+                      cout<<"Payement canceled"<<endl;
+                      goto fourth;
+                  }
+              }
+              else{
+                  goto fourth;
+              }
+            
+          }
+          else{
+              cout<<"Incorrect password"<<endl;
+               goto first;
+          }
+          if(w==z){
+                      cout<<"You payed all amount"<<endl;
+                  }
+                  else if(z>w){
+                      x=z-w;
+                      cout<<"Thank you for your tip of "<<x<<" rupees"<<endl;
+                  }
+                  else{
+                      x=w-z;
+                      cout<<"You have "<<x<<" rupees dew amount"<<endl;
+                  }
+                  
+          
+      }
+     }
 };
 
 void hotel:: choosehotel(){
+    hero:
     cout<<"Welcome to Hotel search.com"<<endl;
     cout<<endl;
 
@@ -31,6 +181,10 @@ void hotel:: choosehotel(){
 
     cout<<"Enter the id of the hotel you want to book"<<endl;
     cin>>id;
+    if(id>=6){
+        cout<<"Invalid input"<<endl;
+        goto hero;
+    }
     switch(id){
         case 1:
         cout<<"Welcome to online booking of Nepal adventure hotel"<<endl;
@@ -96,7 +250,7 @@ void hotel::choose(){
               cout<<"Press 2 to cancel booking"<<endl;
             cin>>q;
             if(q==1){
-                cout<<"Congratulation your booking has been confirmed"<<endl;
+                cout<<"Your booking will be confirmend after paying the bill"<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
@@ -128,9 +282,10 @@ cout<<endl;
             w=6000*x;
             cout<<"press 1 to confirm the booking"<<endl;
               cout<<"Press 2 to cancel booking"<<endl;
+              cout<<endl;
             cin>>q;
             if(q==1){
-                cout<<"Congratulation your booking has been confirmed"<<endl;
+                cout<<"Your booking will be confirmend after paying the bill"<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
@@ -168,7 +323,7 @@ cout<<endl;
               cout<<"Press 2 to cancel booking"<<endl;
             cin>>q;
             if(q==1){
-                cout<<"Congratulation your booking has been confirmed"<<endl;
+                cout<<"Your booking will be confirmend after paying the bill"<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
@@ -203,7 +358,7 @@ cout<<endl;
             cout<<"Press 2 to cancel booking"<<endl;
             cin>>q;
             if(q==1){
-                cout<<"Congratulation your booking has been confirmed"<<endl;
+                cout<<"Your booking will be confirmend after paying the bill"<<endl;
                 cout<<"Name of booking-- "<<name1<<endl;
                 cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
@@ -231,6 +386,8 @@ int main() {
     pukar.choosehotel();
     pukar.setinfo();
     pukar.choose();
+    cout<<endl;
+    pukar.display();
        // Set the time zone to Kathmandu
   setenv("TZ", "Asia/Kathmandu", 1);
   tzset();
