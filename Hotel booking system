@@ -65,7 +65,7 @@ class hotel{
                   }
                   break;
                   case 2:
-          
+          second:
           cout<<"Enter your khalti password "<<endl;
           cin>>d;
           
@@ -96,7 +96,7 @@ class hotel{
           }
           else{
               cout<<"Incorrect password"<<endl;
-               goto first;
+               goto second;
           }
           if(w==z){
                       cout<<"You payed all amount"<<endl;
@@ -112,7 +112,7 @@ class hotel{
                   break;
                   
           case 3:
-          
+          third:
           cout<<"Enter your e-banking password "<<endl;
           cin>>d;
           
@@ -137,7 +137,7 @@ class hotel{
                   }
               }
               else{
-                  goto fourth;
+                  goto third;
               }
             
           }
