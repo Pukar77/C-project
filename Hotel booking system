@@ -1,7 +1,10 @@
+
+
 #include <iostream>
 #include<string>
 #include <ctime>
 #include <cstdlib>
+#include <fstream>
 using namespace std;
 class hotel{
     private:
@@ -13,12 +16,31 @@ class hotel{
     void choose(void);
     void choosehotel(void);
     void info(){
-            cout<<"Name of booking-- "<<name1<<endl;
-                cout<<"Phone number-- "<<phone<<endl;
+    	fstream myfile;
+    	myfile.open("Pukar.txt",ios::out);
+    	if(myfile.is_open()){
+		
+            myfile<<"Name of booking-- "<<name1<<endl;
+                myfile<<"Phone number-- "<<phone<<endl;
                 
-                cout<<"Booked room for date--"<<date<<endl;
-                  cout<<"Room category--Family room"<<endl;
+                myfile<<"Booked room for date--"<<date<<endl;
+                  myfile<<"Room category--Family room"<<endl;
+                         // Set the time zone to Kathmandu
+  //setenv("TZ", "Asia/Kathmandu", 1);
+  //tzset();
+
+  // Get the current date and time
+  time_t currentTime;
+  time(&currentTime);
+  tm* localTime = localtime(&currentTime);
+
+  // Print the current date and time in Kathmandu
+  myfile << "Booking date : " << localTime->tm_mon+1 << "/" << localTime->tm_mday << "/" << localTime->tm_year+1900 << endl;
+  myfile <<"Boking time : "<< localTime->tm_hour << ":" << localTime->tm_min << ":" << localTime->tm_sec << endl;
+
     }
+
+}
      void display(){
       fourth:
       cout<<"Enter 1 to pay through e-sewa"<<endl;
@@ -59,6 +81,7 @@ class hotel{
           else{
               cout<<"Incorrect password"<<endl;
                goto first;
+               
           }
           if(w==z){
                       cout<<"You payed all amount"<<endl;
@@ -105,6 +128,7 @@ class hotel{
           else{
               cout<<"Incorrect password"<<endl;
                goto second;
+                
           }
           if(w==z){
                       cout<<"You payed all amount"<<endl;
@@ -152,6 +176,7 @@ class hotel{
           else{
               cout<<"Incorrect password"<<endl;
                goto first;
+                
           }
           if(w==z){
                       cout<<"You payed all amount"<<endl;
@@ -391,24 +416,10 @@ int main() {
     hotel pukar;
     pukar.choosehotel();
     pukar.setinfo();
-
-
     pukar.choose();
     cout<<endl;
     pukar.display();
     pukar.info();
-       // Set the time zone to Kathmandu
-  //setenv("TZ", "Asia/Kathmandu", 1);
-  //tzset();
-
-  // Get the current date and time
-  time_t currentTime;
-  time(&currentTime);
-  tm* localTime = localtime(&currentTime);
-
-  // Print the current date and time in Kathmandu
-  cout << "Booking date : " << localTime->tm_mon+1 << "/" << localTime->tm_mday << "/" << localTime->tm_year+1900 << endl;
-  cout <<"Boking time : "<< localTime->tm_hour << ":" << localTime->tm_min << ":" << localTime->tm_sec << endl;
 
 
 
