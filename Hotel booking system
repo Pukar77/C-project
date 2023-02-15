@@ -1,6 +1,9 @@
+
+
 #include <iostream>
 #include<string>
 #include <ctime>
+#include <cstdlib>
 using namespace std;
 class hotel{
     private:
@@ -11,6 +14,13 @@ class hotel{
     void setinfo(void);
     void choose(void);
     void choosehotel(void);
+    void info(){
+            cout<<"Name of booking-- "<<name1<<endl;
+                cout<<"Phone number-- "<<phone<<endl;
+                
+                cout<<"Booked room for date--"<<date<<endl;
+                  cout<<"Room category--Family room"<<endl;
+    }
      void display(){
       fourth:
       cout<<"Enter 1 to pay through e-sewa"<<endl;
@@ -22,8 +32,8 @@ class hotel{
           first:
           cout<<"Enter your e-sewa password "<<endl;
           cin>>d;
-          
-          
+
+
           if(d=="pukar"){
               cout<<"Welcome Back"<<endl;
               cout<<"Press 1 to do online payment"<<endl;
@@ -46,7 +56,7 @@ class hotel{
               else{
                   goto fourth;
               }
-            
+
           }
           else{
               cout<<"Incorrect password"<<endl;
@@ -68,8 +78,8 @@ class hotel{
           second:
           cout<<"Enter your khalti password "<<endl;
           cin>>d;
-          
-          
+
+
           if(d=="pukar"){
               cout<<"Welcome Back"<<endl;
               cout<<"Press 1 to do online payment"<<endl;
@@ -92,7 +102,7 @@ class hotel{
               else{
                   goto fourth;
               }
-            
+
           }
           else{
               cout<<"Incorrect password"<<endl;
@@ -110,13 +120,13 @@ class hotel{
                       cout<<"You have "<<x<<" rupees dew amount"<<endl;
                   }
                   break;
-                  
+
           case 3:
           third:
           cout<<"Enter your e-banking password "<<endl;
           cin>>d;
-          
-          
+
+
           if(d=="pukar"){
               cout<<"Welcome Back"<<endl;
               cout<<"Press 1 to do online payment"<<endl;
@@ -139,7 +149,7 @@ class hotel{
               else{
                   goto third;
               }
-            
+
           }
           else{
               cout<<"Incorrect password"<<endl;
@@ -156,14 +166,15 @@ class hotel{
                       x=w-z;
                       cout<<"You have "<<x<<" rupees dew amount"<<endl;
                   }
-                  
-          
+
+
       }
      }
 };
 
 void hotel:: choosehotel(){
     hero:
+
     cout<<"Welcome to Hotel search.com"<<endl;
     cout<<endl;
 
@@ -181,6 +192,7 @@ void hotel:: choosehotel(){
 
     cout<<"Enter the id of the hotel you want to book"<<endl;
     cin>>id;
+
     if(id>=6){
         cout<<"Invalid input"<<endl;
         goto hero;
@@ -202,6 +214,7 @@ void hotel:: choosehotel(){
         cout<<"Welcome to online booking of solti hotel"<<endl;
         break;
     };
+        	system("CLS");
 
 }
 
@@ -217,6 +230,7 @@ void hotel:: setinfo(){
     cin>>phone;
      cout<<"Enter the date you want to book the hotel[m/d/y]"<<endl;
      cin>>date;
+     system("CLS");
 
 }
 
@@ -249,13 +263,11 @@ void hotel::choose(){
             cout<<"press 1 to confirm the booking"<<endl;
               cout<<"Press 2 to cancel booking"<<endl;
             cin>>q;
+            system("CLS");
             if(q==1){
                 cout<<"Your booking will be confirmend after paying the bill"<<endl;
-                cout<<"Name of booking-- "<<name1<<endl;
-                cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
-                cout<<"booked room for date--"<<date<<endl;
-                cout<<"Room category--Honeymoon room"<<endl;
+
             }
             else{
                 goto first;
@@ -286,11 +298,8 @@ cout<<endl;
             cin>>q;
             if(q==1){
                 cout<<"Your booking will be confirmend after paying the bill"<<endl;
-                cout<<"Name of booking-- "<<name1<<endl;
-                cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
-                cout<<"booked room for date--"<<date<<endl;
-                  cout<<"Room category--Business room"<<endl;
+              
             }
             else{
                 goto first;
@@ -324,11 +333,8 @@ cout<<endl;
             cin>>q;
             if(q==1){
                 cout<<"Your booking will be confirmend after paying the bill"<<endl;
-                cout<<"Name of booking-- "<<name1<<endl;
-                cout<<"Phone number-- "<<phone<<endl;
                 cout<<"Total cost--"<<w<<endl;
-                cout<<"Booked room for date--"<<date<<endl;
-                cout<<"Room category--Delux room"<<endl;
+                
             }
             else{
                 goto first;
@@ -342,7 +348,7 @@ cout<<endl;
     }
     break;
      case 4:
-        cout<<"You choosed Family room"<<endl;
+        cout<<"You chose Family room"<<endl;
         cout<<endl;
         cout<<"Press 1 to get information about Family room"<<endl;
         cout<<"Press 2 to go back"<<endl;
@@ -358,12 +364,9 @@ cout<<endl;
             cout<<"Press 2 to cancel booking"<<endl;
             cin>>q;
             if(q==1){
-                cout<<"Your booking will be confirmend after paying the bill"<<endl;
-                cout<<"Name of booking-- "<<name1<<endl;
-                cout<<"Phone number-- "<<phone<<endl;
+                cout<<"Your booking will be confirmed after paying the bill"<<endl;
                 cout<<"Total cost--"<<w<<endl;
-                cout<<"Booked room for date--"<<date<<endl;
-                  cout<<"Room category--Family room"<<endl;
+            
             }
             else{
                 goto first;
@@ -376,7 +379,9 @@ cout<<endl;
 
     }
     break;
+
 }
+
 }
 
 
@@ -385,12 +390,15 @@ int main() {
     hotel pukar;
     pukar.choosehotel();
     pukar.setinfo();
+
+
     pukar.choose();
     cout<<endl;
     pukar.display();
+    pukar.info();
        // Set the time zone to Kathmandu
-  setenv("TZ", "Asia/Kathmandu", 1);
-  tzset();
+  //setenv("TZ", "Asia/Kathmandu", 1);
+  //tzset();
 
   // Get the current date and time
   time_t currentTime;
