@@ -210,6 +210,13 @@ int main() {
     cout<<endl;
     p.display();
     p.hello();
+    			  time_t currentTime;
+  time(&currentTime);
+  tm* localTime = localtime(&currentTime);
+
+  // Print the current date and time in Kathmandu
+  cout << "Booking date : " << localTime->tm_mon+1 << "/" << localTime->tm_mday << "/" << localTime->tm_year+1900 << endl;
+  cout<<"Boking time : "<< localTime->tm_hour << ":" << localTime->tm_min << ":" << localTime->tm_sec << endl;
 
     return 0;
 }
