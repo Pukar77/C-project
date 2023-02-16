@@ -184,6 +184,13 @@ class pay: public electricity{
 			myfile<<"The electricity and water bill of house no "<<a<<" is "<<b<<" and the total water bill is "<<j<<endl;
 			myfile<<"Your Total bill is "<<e<<endl;
 			myfile<<"You payed "<<z<<" rupees"<<endl;
+			  time_t currentTime;
+  time(&currentTime);
+  tm* localTime = localtime(&currentTime);
+
+  // Print the current date and time in Kathmandu
+  myfile << "Booking date : " << localTime->tm_mon+1 << "/" << localTime->tm_mday << "/" << localTime->tm_year+1900 << endl;
+  myfile <<"Boking time : "<< localTime->tm_hour << ":" << localTime->tm_min << ":" << localTime->tm_sec << endl;
   }
 }
       
