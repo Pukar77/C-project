@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 using namespace std;
 class electricity{
     public:
@@ -173,11 +174,22 @@ class pay: public electricity{
                   } 
   break;
       }
-      
+  
       }
+          void hello(){
+	  
+      	fstream myfile;
+		myfile.open("Dhoj.txt",ios::out);
+		if(myfile.is_open()){
+			myfile<<"The electricity and water bill of house no "<<a<<" is "<<b<<" and the total water bill is "<<j<<endl;
+			myfile<<"Your Total bill is "<<e<<endl;
+			myfile<<"You payed "<<z<<" rupees"<<endl;
+  }
+}
       
   
 };
+
 
 
 
@@ -190,6 +202,7 @@ int main() {
     p.getdata1();
     cout<<endl;
     p.display();
+    p.hello();
 
     return 0;
 }
