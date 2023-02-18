@@ -56,9 +56,7 @@ class hotel{
 
           if(d=="pukar"){
               cout<<"Welcome Back"<<endl;
-              cout<<"Press 1 to do online payment"<<endl;
-              cin>>f;
-              if(f==1){
+             
                   cout<<"Enter the amount you want to pay"<<endl;
                   cin>>z;
                   cout<<"Enter 1 to confirm payement"<<endl;
@@ -67,11 +65,7 @@ class hotel{
                   if(r==1){
                   cout<<"Congratulation payement successful"<<endl;
                   cout<<"Your room has been booked successfully"<<endl;
-                  }
-                  else{
-                      cout<<"Payement canceled"<<endl;
-                      goto fourth;
-                  }
+                
               }
               else{
                   goto fourth;
@@ -103,9 +97,7 @@ class hotel{
 
           if(d=="pukar"){
               cout<<"Welcome Back"<<endl;
-              cout<<"Press 1 to do online payment"<<endl;
-              cin>>f;
-              if(f==1){
+            
                   cout<<"Enter the amount you want to pay"<<endl;
                   cin>>z;
                   cout<<"Enter 1 to confirm payement"<<endl;
@@ -114,11 +106,7 @@ class hotel{
                   if(r==1){
                   cout<<"Congratulation payement successful"<<endl;
                   cout<<"Your room has been booked successfully"<<endl;
-                  }
-                  else{
-                      cout<<"Payement canceled"<<endl;
-                      goto fourth;
-                  }
+             
               }
               else{
                   goto fourth;
@@ -151,9 +139,7 @@ class hotel{
 
           if(d=="pukar"){
               cout<<"Welcome Back"<<endl;
-              cout<<"Press 1 to do online payment"<<endl;
-              cin>>f;
-              if(f==1){
+            
                   cout<<"Enter the amount you want to pay"<<endl;
                   cin>>z;
                   cout<<"Enter 1 to confirm payement"<<endl;
@@ -162,11 +148,7 @@ class hotel{
                   if(r==1){
                   cout<<"Congratulation payement successful"<<endl;
                   cout<<"Your room has been booked successfully"<<endl;
-                  }
-                  else{
-                      cout<<"Payement canceled"<<endl;
-                      goto fourth;
-                  }
+                 
               }
               else{
                   goto third;
